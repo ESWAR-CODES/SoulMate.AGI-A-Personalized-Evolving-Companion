@@ -1,0 +1,6 @@
+flask
+openai
+faiss-cpu
+textblob
+numpy
+python-dotenv
