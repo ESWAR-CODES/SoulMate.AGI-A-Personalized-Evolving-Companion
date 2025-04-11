@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: soulmate-agi
+    runtime: python
+    repo: https://github.com/ESWAR-CODES/SoulMate.AGI-A-Personalized-Evolving-Companion
+    branch: main
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python app.py"
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+    plan: free
