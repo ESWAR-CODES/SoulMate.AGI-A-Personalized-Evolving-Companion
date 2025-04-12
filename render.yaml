@@ -5,8 +5,9 @@ services:
     repo: https://github.com/ESWAR-CODES/SoulMate.AGI-A-Personalized-Evolving-Companion
     branch: main
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "python app.py"
+    startCommand: "gunicorn app:app --bind 0.0.0.0:$PORT"
     envVars:
       - key: OPENAI_API_KEY
         sync: false
     plan: free
+
